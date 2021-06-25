@@ -1,25 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render the heading column name 1`] = `
-.c4 {
+.c5 {
   color: #868686;
   font-size: 1.4rem;
   font-weight: 300;
 }
 
-.c4::after {
+.c5::after {
   width: 3rem;
 }
 
-.c1 {
+.c2 {
   display: none;
 }
 
-.c5 {
+.c6 {
   display: none;
 }
 
 .c0 {
+  padding: 2.4rem;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,11 +43,14 @@ exports[`<Footer /> should render the heading column name 1`] = `
   margin-top: 3.2rem;
 }
 
-.c2 {
+.c3 {
   text-align: center;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,8 +58,8 @@ exports[`<Footer /> should render the heading column name 1`] = `
   padding-left: 3.2rem;
 }
 
-.c2 a,
-.c2 span {
+.c3 a,
+.c3 span {
   display: block;
   color: #868686;
   -webkit-text-decoration: none;
@@ -61,21 +68,31 @@ exports[`<Footer /> should render the heading column name 1`] = `
   font-size: 1.4rem;
 }
 
-.c2 a:hover {
+.c3 a:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c2 img {
+.c3 img {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.c3 img:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.c3 img {
   margin-right: 10px;
 }
 
-.c6 {
+.c7 {
   text-align: center;
 }
 
-.c6 a,
-.c6 span {
+.c7 a,
+.c7 span {
   display: block;
   color: #868686;
   -webkit-text-decoration: none;
@@ -84,12 +101,22 @@ exports[`<Footer /> should render the heading column name 1`] = `
   font-size: 1.4rem;
 }
 
-.c6 a:hover {
+.c7 a:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c3 {
+.c7 img {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.c7 img:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.c4 {
   width: auto;
   color: #868686;
   font-size: 1.2rem;
@@ -97,25 +124,25 @@ exports[`<Footer /> should render the heading column name 1`] = `
 }
 
 @media (max-width:768px) {
+  .c2 {
+    display: block;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+@media (min-width:768px) {
+  .c6 {
+    display: block;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+@media (min-width:768px) {
   .c1 {
-    display: block;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-}
-
-@media (min-width:768px) {
-  .c5 {
-    display: block;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-}
-
-@media (min-width:768px) {
-  .c0 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -123,11 +150,11 @@ exports[`<Footer /> should render the heading column name 1`] = `
 }
 
 @media (max-width:768px) {
-  .c2 {
+  .c3 {
     padding-left: 0;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -135,34 +162,34 @@ exports[`<Footer /> should render the heading column name 1`] = `
     text-align: center;
   }
 
-  .c2 img {
+  .c3 img {
     height: 25px;
   }
 }
 
 @media (max-width:768px) {
-  .c2 img {
+  .c3 img {
     height: 20px;
   }
 }
 
 @media (max-width:768px) {
-  .c6 img {
+  .c7 img {
     height: 20px;
   }
 }
 
 <footer
-  class=""
+  class="c0"
 >
   <div
-    class="c0"
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c2"
+        class="c3"
       >
         <img
           alt="RaiaDrogasil"
@@ -187,20 +214,20 @@ exports[`<Footer /> should render the heading column name 1`] = `
       </div>
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       <h2
-        class="c4"
+        class="c5"
         color="secondary"
       >
         RD 2017. Todos os direitos reservados
       </h2>
     </div>
     <div
-      class="c5"
+      class="c6"
     >
       <div
-        class="c2"
+        class="c3"
       >
         <img
           alt="RaiaDrogasil"
@@ -225,7 +252,7 @@ exports[`<Footer /> should render the heading column name 1`] = `
       </div>
     </div>
     <div
-      class="c6"
+      class="c7"
     >
       <img
         alt="RaiaDrogasil"
@@ -234,4 +261,4 @@ exports[`<Footer /> should render the heading column name 1`] = `
     </div>
   </div>
 </footer>
-`
+`;

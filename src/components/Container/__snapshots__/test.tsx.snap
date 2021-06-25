@@ -2,7 +2,7 @@
 
 exports[`<Container /> should render the heading 1`] = `
 .c0 {
-  max-width: 75rem;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: calc(0.938rem / 2);
@@ -16,4 +16,4 @@ exports[`<Container /> should render the heading 1`] = `
     Raia Dograsil
   </span>
 </div>
-`
+`;

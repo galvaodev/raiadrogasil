@@ -1,4 +1,4 @@
-import theme from 'styles/theme'
+import { light } from 'styles/theme'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import { Container } from '.'
@@ -13,7 +13,7 @@ describe('<Container />', () => {
 
     expect(container.firstChild).toHaveStyleRule(
       'max-width',
-      theme.grid.container
+      light.grid.container
     )
 
     expect(container.firstChild).toMatchSnapshot()

@@ -21,7 +21,7 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.h2<HeadingProps>`
   ${({ theme, color, size }) => css`
-    color: ${theme.colors[color]};
+    color: ${theme.colors[color!]};
     ${!!size && wrapperModifiers[size](theme)}
   `}
 `
