@@ -4,7 +4,7 @@ import { ButtonProps } from '.'
 //passando apenas size de props de Button utilizando metódo pick ou omit que esconde os itens desejados
 type WrapperProps = { hasIcon: boolean } & Pick<
   ButtonProps,
-  'size' | 'fullWidth'
+  'size' | 'fullWidth' | 'color'
 >
 
 const wrapperModifiers = {
@@ -37,19 +37,21 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.button<WrapperProps>`
-  ${({ theme, size, fullWidth, hasIcon }) => css`
+  ${({ theme, size, fullWidth, hasIcon, color }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #ff5f5f 0%, #f062c0 50%);
+    background: ${theme.colors[color!]};
     color: ${theme.colors.white};
-    border: 0;
+    border: 1px solid ${theme.colors[color!]};
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxsmall};
     text-decoration: none;
+    transition: all ease 0.3s;
 
     &:hover {
-      background: linear-gradient(180deg, #e35565 0%, #d958a6 50%);
+      background: transparent;
+      color: ${theme.colors[color!]};
     }
 
     ${!!size && wrapperModifiers[size](theme)}

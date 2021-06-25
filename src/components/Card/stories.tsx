@@ -6,4 +6,8 @@ export default {
   component: Card
 } as Meta
 
-export const Default: Story = () => <Card />
+export const Default: Story = () => (
+  <div style={{ maxWidth: '400px' }}>
+    <Card />
+  </div>
+)
