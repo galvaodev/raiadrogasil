@@ -6,13 +6,19 @@ interface ColorsProps {
 }
 
 export const Wrapper = styled.main`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  `}
 `
 
 export const Thumbnail = styled.div<ColorsProps>`
   ${({ theme, color }) => css`
+    width: 100%;
     text-align: center;
     background: ${theme.colors[color!]};
+    height: auto;
     padding: ${theme.spacings.small};
 
     img {

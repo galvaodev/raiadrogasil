@@ -41,6 +41,14 @@ export const Column = styled.div<flexProps>`
       text-decoration: underline;
     }
 
+    img {
+      filter: ${theme.img.filter};
+
+      &:hover {
+        filter: ${theme.img.filterHover};
+      }
+    }
+
     ${flex &&
     css`
       flex: 1;
@@ -59,6 +67,7 @@ export const Column = styled.div<flexProps>`
         text-align: center;
 
         img {
+
           height: 25px;
         }
       `}

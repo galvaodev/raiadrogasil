@@ -1,5 +1,6 @@
 import {
   createGlobalStyle,
+  css,
   DefaultTheme,
   GlobalStyleComponent
 } from 'styled-components'
@@ -35,10 +36,25 @@ const GlobalStyles: GlobalStyleComponent<
       height: 100%;
     }
 
-    body {
-      font-family: 'Open Sans';
-      font-size: 16px;
-      background: url('/img/pix_bg.jpg');
-    }
+    ${({ theme }) => css`
+      body {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        background: ${theme.background};
+      }
+
+      .ReactModal__Overlay {
+        opacity: 0;
+        transition: opacity 1000ms ease-in-out;
+      }
+
+      .ReactModal__Overlay--after-open {
+        opacity: 1;
+      }
+
+      .ReactModal__Overlay--before-close {
+        opacity: 0;
+      }
+    `}
 `
 export default GlobalStyles

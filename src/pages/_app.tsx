@@ -1,16 +1,16 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { ThemeProvider } from 'styled-components'
-import theme from 'styles/theme'
+
 import { ThemeCustomProvider } from 'Hooks/context'
 
 import GlobalStyles from 'styles/global'
+import Theme from 'components/Theme'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeCustomProvider>
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Head>
             <title>Raia Drogasil - Seja bem vindo</title>
             <link rel="shortcut icon" href="/img/icon-512.png" />
@@ -31,7 +31,7 @@ function App({ Component, pageProps }: AppProps) {
           <GlobalStyles />
 
           <Component {...pageProps} />
-        </ThemeProvider>
+        </Theme>
       </ThemeCustomProvider>
     </>
   )
