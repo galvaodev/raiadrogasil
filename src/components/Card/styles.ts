@@ -1,14 +1,23 @@
 import styled, { css } from 'styled-components'
 import * as S from 'components/Button/styles'
+
+interface ColorsProps {
+  color?: 'orange' | 'yellow' | 'purple'
+}
+
 export const Wrapper = styled.main`
   ${({ theme }) => css``}
 `
 
-export const Thumbnail = styled.div`
-  ${({ theme }) => css`
+export const Thumbnail = styled.div<ColorsProps>`
+  ${({ theme, color }) => css`
     text-align: center;
-    background: ${theme.colors.orange};
+    background: ${theme.colors[color!]};
     padding: ${theme.spacings.small};
+
+    img {
+      max-width: 100%;
+    }
   `}
 `
 

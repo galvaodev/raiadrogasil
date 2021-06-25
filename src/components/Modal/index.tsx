@@ -9,7 +9,7 @@ const Modal = ({ setIsOpen, isOpen }: PropsModal) => {
   const modalStyles = { overlay: { zIndex: 10 } }
 
   return (
-    <S.Wrapper
+    <S.ModalComponent
       isOpen={isOpen}
       style={modalStyles}
       onRequestClose={() => setIsOpen()}
@@ -18,7 +18,7 @@ const Modal = ({ setIsOpen, isOpen }: PropsModal) => {
       contentLabel="Experiemente grátis por 30 dias"
     >
       dksopakdo
-    </S.Wrapper>
+    </S.ModalComponent>
   )
 }
 

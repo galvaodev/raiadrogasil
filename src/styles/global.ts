@@ -42,7 +42,7 @@ const GlobalStyles: GlobalStyleComponent<
       font-size: ${theme.font.sizes.medium};
       ${!removeBg &&
       css`
-        background-color: ${theme.colors.secondary};
+        background: url('/img/pix_bg.jpg');
       `}
     }
   `}

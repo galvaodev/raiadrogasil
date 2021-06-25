@@ -10,6 +10,7 @@ export type CardProps = {
   thumbnail: string
   isLongTexte?: boolean
   text: string
+  modalOpen?: any
   click?: () => (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
@@ -19,7 +20,8 @@ const Card = ({
   text = `Quando pressionado o botão <strong>Leia mais...</strong> o restante da
   informação deverá aparecer em scroll down.`,
   color = 'orange',
-  isLongTexte = true
+  isLongTexte = false,
+  modalOpen
 }: CardProps) => {
   const [bodyText, setBodyText] = useState(text)
   const [showAll, setShowAll] = useState(false)
@@ -32,9 +34,15 @@ const Card = ({
   const isButton = useCallback(
     (param?) => {
       switch (param) {
-        case 'foo':
+        case 'longText':
           return (
             <Button color={color} onClick={() => setShowAll(!showAll)}>
+              Leia mais...
+            </Button>
+          )
+        case 'modal':
+          return (
+            <Button color={color} onClick={() => modalOpen()}>
               Leia mais...
             </Button>
           )
@@ -61,7 +69,8 @@ const Card = ({
         <S.Text
           dangerouslySetInnerHTML={{ __html: showAll ? text : bodyText }}
         />
-        {isLongTexte ? isButton('foo') : isButton()}
+        {isLongTexte && isButton('longText')}
+        {modalOpen && isButton('modal')}
       </S.Body>
     </S.Wrapper>
   )

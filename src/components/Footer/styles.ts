@@ -5,7 +5,11 @@ interface flexProps {
   flex?: boolean
 }
 
-export const Wrapper = styled.footer``
+export const Wrapper = styled.footer`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.small};
+  `}
+`
 
 export const Content = styled.div`
   ${({ theme }) => css`
@@ -40,6 +44,7 @@ export const Column = styled.div<flexProps>`
     ${flex &&
     css`
       flex: 1;
+      flex-wrap: wrap;
       display: flex;
       padding-left: ${theme.spacings.medium};
 
@@ -49,7 +54,7 @@ export const Column = styled.div<flexProps>`
 
       ${media.lessThan('medium')`
         padding-left: 0;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
         text-align: center;
 
