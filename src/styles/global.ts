@@ -1,6 +1,5 @@
 import {
   createGlobalStyle,
-  css,
   DefaultTheme,
   GlobalStyleComponent
 } from 'styled-components'
@@ -30,7 +29,6 @@ const GlobalStyles: GlobalStyleComponent<
     font-size: 62.5%;
   }
 
-  ${({ theme, removeBg }) => css`
     html,
     body,
     #__next {
@@ -38,13 +36,9 @@ const GlobalStyles: GlobalStyleComponent<
     }
 
     body {
-      font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
-      ${!removeBg &&
-      css`
-        background: url('/img/pix_bg.jpg');
-      `}
+      font-family: 'Open Sans';
+      font-size: 16px;
+      background: url('/img/pix_bg.jpg');
     }
-  `}
 `
 export default GlobalStyles

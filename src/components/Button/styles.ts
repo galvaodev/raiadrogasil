@@ -48,6 +48,7 @@ export const Wrapper = styled.button<WrapperProps>`
     padding: ${theme.spacings.xxsmall};
     text-decoration: none;
     transition: all ease 0.3s;
+    cursor: pointer;
 
     &:hover {
       background: transparent;

@@ -13,6 +13,8 @@ const Home = () => {
 
   const modalOpen = useCallback(() => {
     setIsOpen(isOpen ? false : true)
+
+    console.log('aa')
   }, [isOpen, setIsOpen])
 
   return (
@@ -49,6 +51,7 @@ const Home = () => {
               text="Quando pressionado o botão <strong>Leia mais...</strong> o restante da
                 informação deverá aparecer em scroll down."
               color="purple"
+              blackFriday
             />
           </S.Grid>
         </S.Row>

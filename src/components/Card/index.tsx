@@ -1,4 +1,5 @@
 import Button from 'components/Button'
+import { useTheme } from 'Hooks/context'
 import { useCallback, useEffect } from 'react'
 import { useState } from 'react'
 
@@ -11,6 +12,7 @@ export type CardProps = {
   isLongTexte?: boolean
   text: string
   modalOpen?: any
+  blackFriday?: boolean
   click?: () => (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
@@ -21,10 +23,12 @@ const Card = ({
   informação deverá aparecer em scroll down.`,
   color = 'orange',
   isLongTexte = false,
-  modalOpen
+  modalOpen,
+  blackFriday
 }: CardProps) => {
   const [bodyText, setBodyText] = useState(text)
   const [showAll, setShowAll] = useState(false)
+  const { toggleTheme } = useTheme()
 
   const LongText = useCallback(() => {
     const value: string = text.substring(0, 70) + '...'
@@ -46,11 +50,17 @@ const Card = ({
               Leia mais...
             </Button>
           )
+        case 'blackfriday':
+          return (
+            <Button color={color} onClick={toggleTheme}>
+              Leia mais...
+            </Button>
+          )
         default:
-          return 'foo'
+          return
       }
     },
-    [setShowAll, showAll, color]
+    [setShowAll, showAll, color, toggleTheme, modalOpen]
   )
 
   useEffect(() => {
@@ -71,6 +81,7 @@ const Card = ({
         />
         {isLongTexte && isButton('longText')}
         {modalOpen && isButton('modal')}
+        {blackFriday && isButton('blackfriday')}
       </S.Body>
     </S.Wrapper>
   )
